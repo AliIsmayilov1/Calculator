@@ -1,3 +1,4 @@
+let opt
 function Type1() {
     document.getElementById("result").innerText += document.getElementById("a").innerText
 }
@@ -49,25 +50,68 @@ function Del() {
         document.getElementById("result").innerText = ""
     }
 }
+let sum1
+let sum2
+let sum
 function plus() {
+    sum1 = document.getElementById("result").innerText;
+    document.getElementById("result").innerText = ""
+    opt = "+"
+}
+let mns1
+let mns2
+let mns
+function minus() {
+    mns1 = document.getElementById("result").innerText;
+    document.getElementById("result").innerText = ""
+    opt = "-"
+}
+let vrm1
+let vrm2
+let vrm
+function multiply() {
+    vrm1 = document.getElementById("result").innerText
+    document.getElementById("result").innerText = ""
+    opt = "*"
+}
+
+let blm1
+let blm2
+let blm
+function divide() {
+    blm1 = document.getElementById("result").innerText
+    document.getElementById("result").innerText = ""
+    opt = "/"
+}
+
+function Reset(){
     document.getElementById("result").innerText = ""
 }
 
 function equals() {
-    let sum1 = document.getElementById("result").innerText;
-    let sum2 = document.getElementById("result").innerText;
-    let sum = +sum1 + +sum2;
-    document.getElementById("result").innerText = sum
-}
-function minus() {
-    let mns1 = document.getElementById("result").innerText;
-    let mns2 = documnet.getElementById("result").innerText;
-    if (mns1 > mns2) {
-        let mns = +mns1 - +mns2
+    if (opt == "+") {
+        sum2 = document.getElementById("result").innerText;
+        sum = Number(sum1) + Number(sum2);
+        document.getElementById("result").innerText = sum
+    }
+    if (opt == "-") {
+        let mns2 = document.getElementById("result").innerText;
+        if (mns1 > mns2) {
+            mns = Number(mns1) - Number(mns2)
+        }
+        else {
+            mns = Number(mns2) - Number(mns1)
+        }
         document.getElementById("result").innerText = mns
     }
-    else {
-        let mns = +mns2 - +mns1
-        document.getElementById("result").innerText = mns
+    if (opt == "*") {
+        vrm2 = document.getElementById("result").innerText
+        vrm = Number(vrm1) * Number(vrm2)
+        document.getElementById("result").innerText = vrm
+    }
+    if (opt == "/") {
+        blm2 = document.getElementById("result").innerText
+        blm = Number(blm1) / Number(blm2)
+        document.getElementById("result").innerText = blm
     }
 }

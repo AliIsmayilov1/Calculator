@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="calculator.css">
+    <link rel="icon" href="calculator.png">
 </head>
+
 <body>
     <header>
         <h2>
@@ -39,13 +42,14 @@
             <button onclick="minus()" id="mn">-</button>
             <button id="pt">.</button>
             <button onclick="Type0()" id="z">0</button>
-            <button id="bl">/</button>
-            <button id="vr">x</button>
-            <button id="rst">RESET</button>
+            <button onclick="divide()" id="bl">/</button>
+            <button onclick="multiply()" id="vr">x</button>
+            <button onclick="Reset()" id="rst">RESET</button>
             <button onclick="equals()" id="eql">=</button>
         </div>
     </main>
 
     <script src="calculator.js"></script>
 </body>
+
 </html>

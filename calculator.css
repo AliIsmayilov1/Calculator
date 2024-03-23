@@ -29,6 +29,13 @@ header>div#themes {
 
 header>div#themes>button {
     background-color: #EEE4B1;
+    border: 0px;
+}
+header>div#themes>button:active {
+    opacity: 0.5;
+}
+header>div#themes>button:hover {
+    cursor: pointer;
 }
 
 div#result {
@@ -69,6 +76,9 @@ div#operators>button {
 
 div#operators>button:active {
     opacity: 0.5;
+}
+div#operators>button:hover {
+    cursor: pointer;
 }
 
 div#operators>button#dl {
