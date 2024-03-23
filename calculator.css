@@ -1,0 +1,155 @@
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #430A5D;
+    color: white;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+header>div#themes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header>div#themes>button {
+    background-color: #EEE4B1;
+}
+
+div#result {
+    background-color: #5F374B;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div#operators {
+    border-radius: 8px;
+    display: grid;
+    padding: 16px;
+    background-color: #8C6A5D;
+    height: auto;
+    width: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+        "g k h dl"
+        "d e f pl"
+        "a b c mn"
+        "pt z bl vr"
+        "rst rst eql elq "
+    ;
+}
+
+div#operators>button {
+    height: 50px;
+    width: 70px;
+    background-color: #EEE4B1;
+    border: 1px solid transparent;
+    margin: 8px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div#operators>button:active {
+    opacity: 0.5;
+}
+
+button#a {
+    grid-area: a;
+}
+
+button#b {
+    grid-area: b;
+}
+
+button#c {
+    grid-area: c;
+}
+
+button#d {
+    grid-area: d;
+}
+
+button#e {
+    grid-area: e;
+}
+
+button#f {
+    grid-area: f;
+}
+
+button#g {
+    grid-area: g;
+}
+
+button#k {
+    grid-area: k;
+}
+
+button#h {
+    grid-area: h;
+}
+
+button#z {
+    grid-area: z;
+}
+
+button#pl {
+    grid-area: pl;
+}
+
+button#mn {
+    grid-area: mn;
+}
+
+div#operators>button#dl {
+    grid-area: dl;
+    color: aliceblue;
+    background-color: #5F374B;
+}
+
+button#pt {
+    grid-area: pt;
+}
+
+button#bl {
+    grid-area: bl;
+}
+
+button#vr {
+    grid-area: vr;
+}
+
+div#operators > button#rst {
+    grid-area: rst;
+    width: auto;
+    color : aliceblue;
+    background-color: red;
+}
+
+div#operators > button#eql {
+    grid-area: eql;
+    width: 185px;
+    background-color: #5F374B;
+    color : aliceblue;
+}

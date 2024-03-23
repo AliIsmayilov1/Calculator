@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <header>
+        <h2>
+            calc
+        </h2>
+        <div id="themes">
+            <p>
+                Themes
+            </p>
+            <button onclick="theme1()">1</button>
+            <button onclick="theme2()">2</button>
+            <button onclick="theme3()">3</button>
+        </div>
+    </header>
+    <main>
+        <div id="result">
+            <span></span>
+        </div>
+        <div id="operators">
+            <button onclick="Type1()" id="a">1</button>
+            <button onclick="Type2()" id="b">2</button>
+            <button id="c">3</button>
+            <button id="d">4</button>
+            <button id="e">5</button>
+            <button id="f">6</button>
+            <button onclick="TypeA()" id="g">7</button>
+            <button id="k">8</button>
+            <button id="h">9</button>
+            <button id="z">0</button>
+            <button id="pl">+</button>
+            <button id="mn">-</button>
+            <button id="vr">x</button>
+            <button id="bl">/</button>
+            <button id="pt">.</button>
+            <button id="dl">del</button>
+            <button id="rst">RESET</button>
+            <button id="eql">=</button>
+        </div>
+    </main>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
