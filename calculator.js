@@ -107,6 +107,9 @@ function divide() {
 function Reset() {
     document.getElementById("result").innerText = ""
 }
+function point (){
+    document.getElementById("result").innerText += "."
+}
 
 function equals() {
     if (opt == "+") {
