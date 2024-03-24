@@ -1,3 +1,4 @@
+let btns = document.getElementsByTagName("button")
 let opt
 function Type1() {
     document.getElementById("result").innerText += document.getElementById("a").innerText
@@ -33,16 +34,35 @@ function theme1() {
     document.body.style.backgroundColor = "#430A5D"
     document.getElementById("result").style.backgroundColor = "#5F374B"
     document.getElementById("operators").style.backgroundColor = "#8C6A5D"
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].style.backgroundColor = "#EEE4B1"
+    }
+    document.getElementById("rst").style.backgroundColor = "red" 
+    document.getElementById("eql").style.backgroundColor = "#5F374B"
+    document.getElementById("dl").style.backgroundColor = "#5F374B"
 }
 function theme2() {
     document.body.style.backgroundColor = "#5356FF"
     document.getElementById("result").style.backgroundColor = "#378CE7"
     document.getElementById("operators").style.backgroundColor = "#67C6E3"
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].style.backgroundColor = "#DFF5FF"
+        // btns[i].style.color = "black"
+    }
+    document.getElementById("rst").style.backgroundColor = "red" 
+    document.getElementById("eql").style.backgroundColor = "#378CE7"
+    document.getElementById("dl").style.backgroundColor = "#378CE7"
 }
 function theme3() {
-    document.body.style.backgroundColor = "#FF204E"
-    document.getElementById("result").style.backgroundColor = "#A0153E"
-    document.getElementById("operators").style.backgroundColor = "#5D0E41"
+    document.body.style.backgroundColor = "#496989"
+    document.getElementById("result").style.backgroundColor = "#58A399"
+    document.getElementById("operators").style.backgroundColor = "#A8CD9F"
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].style.backgroundColor = "#E2F4C5"
+    }
+    document.getElementById("rst").style.backgroundColor = "red" 
+    document.getElementById("eql").style.backgroundColor = "#58A399"
+    document.getElementById("dl").style.backgroundColor = "#58A399"
 }
 function Del() {
     document.getElementById("result").innerText = Math.trunc(+document.getElementById("result").innerText / 10)
@@ -84,7 +104,7 @@ function divide() {
     opt = "/"
 }
 
-function Reset(){
+function Reset() {
     document.getElementById("result").innerText = ""
 }
 
