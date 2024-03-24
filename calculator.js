@@ -37,7 +37,7 @@ function theme1() {
     for (let i = 0; i < btns.length; i++) {
         btns[i].style.backgroundColor = "#EEE4B1"
     }
-    document.getElementById("rst").style.backgroundColor = "red" 
+    document.getElementById("rst").style.backgroundColor = "red"
     document.getElementById("eql").style.backgroundColor = "#5F374B"
     document.getElementById("dl").style.backgroundColor = "#5F374B"
 }
@@ -49,7 +49,7 @@ function theme2() {
         btns[i].style.backgroundColor = "#DFF5FF"
         // btns[i].style.color = "black"
     }
-    document.getElementById("rst").style.backgroundColor = "red" 
+    document.getElementById("rst").style.backgroundColor = "red"
     document.getElementById("eql").style.backgroundColor = "#378CE7"
     document.getElementById("dl").style.backgroundColor = "#378CE7"
 }
@@ -60,7 +60,7 @@ function theme3() {
     for (let i = 0; i < btns.length; i++) {
         btns[i].style.backgroundColor = "#E2F4C5"
     }
-    document.getElementById("rst").style.backgroundColor = "red" 
+    document.getElementById("rst").style.backgroundColor = "red"
     document.getElementById("eql").style.backgroundColor = "#58A399"
     document.getElementById("dl").style.backgroundColor = "#58A399"
 }
@@ -107,7 +107,7 @@ function divide() {
 function Reset() {
     document.getElementById("result").innerText = ""
 }
-function point (){
+function point() {
     document.getElementById("result").innerText += "."
 }
 
@@ -120,10 +120,11 @@ function equals() {
     if (opt == "-") {
         let mns2 = document.getElementById("result").innerText;
         if (mns1 > mns2) {
-            mns = Number(mns1) - Number(mns2)
+            mns = Math.abs(Number(mns1) - Number(mns2))
         }
         else {
             mns = Number(mns2) - Number(mns1)
+            mns = -mns
         }
         document.getElementById("result").innerText = mns
     }
