@@ -1,3 +1,27 @@
+window.addEventListener("keydown", (event) => {
+    console.log(event);
+    if (event.key == "+") {
+        event.preventDefault();
+        plus()
+    } else if (event.key >= 0) {
+        document.getElementById("result").innerText += `${event.key}`
+    } else if (event.key == "=" || event.key == "Enter") {
+        equals()
+    } else if (event.key == "-") {
+        minus()
+    } else if (event.key == "*") {
+        multiply()
+    } else if (event.key == "/") {
+        divide()
+    } else if (event.key == "Backspace") {
+        Del()
+    } else if (event.key == "Delete") {
+        Reset()
+    } else if (event.key == "Period") {
+        point()
+    }
+})
+
 let btns = document.getElementsByTagName("button")
 let opt
 function Type1() {
@@ -30,6 +54,18 @@ function Type9() {
 function Type0() {
     document.getElementById("result").innerText += document.getElementById("z").innerText
 }
+function Del() {
+    document.getElementById("result").innerText = Math.trunc(+document.getElementById("result").innerText / 10)
+    if (document.getElementById("result").innerText == 0) {
+        document.getElementById("result").innerText = ""
+    }
+}
+function Reset() {
+    document.getElementById("result").innerText = ""
+}
+function point() {
+    document.getElementById("result").innerText += "."
+}
 function theme1() {
     document.body.style.backgroundColor = "#430A5D"
     document.getElementById("result").style.backgroundColor = "#5F374B"
@@ -47,7 +83,6 @@ function theme2() {
     document.getElementById("operators").style.backgroundColor = "#67C6E3"
     for (let i = 0; i < btns.length; i++) {
         btns[i].style.backgroundColor = "#DFF5FF"
-        // btns[i].style.color = "black"
     }
     document.getElementById("rst").style.backgroundColor = "red"
     document.getElementById("eql").style.backgroundColor = "#378CE7"
@@ -64,12 +99,7 @@ function theme3() {
     document.getElementById("eql").style.backgroundColor = "#58A399"
     document.getElementById("dl").style.backgroundColor = "#58A399"
 }
-function Del() {
-    document.getElementById("result").innerText = Math.trunc(+document.getElementById("result").innerText / 10)
-    if (document.getElementById("result").innerText == 0) {
-        document.getElementById("result").innerText = ""
-    }
-}
+
 let sum1
 let sum2
 let sum
@@ -104,12 +134,6 @@ function divide() {
     opt = "/"
 }
 
-function Reset() {
-    document.getElementById("result").innerText = ""
-}
-function point() {
-    document.getElementById("result").innerText += "."
-}
 
 function equals() {
     if (opt == "+") {
@@ -119,7 +143,7 @@ function equals() {
     }
     if (opt == "-") {
         let mns2 = document.getElementById("result").innerText;
-        if (mns1 > mns2) {
+        if (Number(mns1) > Number(mns2)) {
             mns = Math.abs(Number(mns1) - Number(mns2))
         }
         else {
